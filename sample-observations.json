@@ -1,0 +1,4 @@
+[
+  {"id":"I-01","asset":"FD-302","lang":"es","source":"RTU-18","kind":"telemetry","observed":"2026-11-10T03:58:00Z","text":"sin suministro"},
+  {"id":"I-02","asset":"FD-302","lang":"ur","source":"CREW-28","kind":"field","observed":"2026-11-10T03:56:00Z","text":"بجلی بند"}
+]

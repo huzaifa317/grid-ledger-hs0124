@@ -1,0 +1,8 @@
+demo-recording/
+record-demo.cjs
+convert-demo.cjs
+*.webm
+*.zip
+node_modules/
+.env
+.env.*

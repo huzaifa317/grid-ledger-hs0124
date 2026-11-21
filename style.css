@@ -1,0 +1,13 @@
+:root{color-scheme:dark;--bg:#101820;--panel:#18252f;--ink:#f0f6f7;--muted:#b4c6cd;--line:#334650;--mint:#83e5c0;--amber:#ffcf83}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px max(5vw,18px);border-bottom:1px solid var(--line);background:#131f28}
+header strong{font-size:20px}header span,.eyebrow{font:700 12px/1.6 ui-monospace,monospace;letter-spacing:.1em;color:var(--mint)}
+main{max-width:1220px;margin:auto;padding:24px clamp(14px,4vw,46px) 50px}
+.intro{margin:20px 0 28px}h1{font-size:clamp(38px,6vw,66px);letter-spacing:-.055em;line-height:1;margin:0}h2,h3{margin:0 0 10px}p{color:var(--muted);margin:8px 0 14px}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+label{display:block;font-size:13px;color:var(--muted);margin:10px 0 5px}button,select,textarea,input{font:inherit;color:inherit}button,select,textarea{border:1px solid var(--line);background:#101d26;border-radius:7px;padding:9px 12px}button{cursor:pointer}button:hover,button[aria-current=true]{border-color:var(--mint)}:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
+nav{display:grid;gap:6px;margin-top:12px}nav button{text-align:left;font-size:14px}nav button span{display:block;color:var(--muted);font:12px ui-monospace,monospace}
+.import{margin-top:20px;border-top:1px solid var(--line)}input[type=file]{max-width:100%;font-size:13px}#decision{padding:14px 16px;margin:12px 0 20px;border-left:4px solid var(--mint);background:#102a2c;border-radius:5px}#decision.hold{border-color:var(--amber);background:#352c21}#decision strong{font-size:22px}#decision p{margin:4px 0}
+.record{padding:10px 0;border-top:1px solid var(--line);overflow-wrap:anywhere}.record strong{display:block}.record small{color:var(--muted)}#evidence{margin-bottom:22px}.primary{background:var(--mint);color:#102722;font-weight:700;margin-top:10px}textarea{display:block;width:100%;min-height:70px}
+.benchmark{margin-top:16px}.bench-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line)}li{overflow-wrap:anywhere}
+@media(max-width:730px){.layout{grid-template-columns:1fr}nav{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{padding:14px}}

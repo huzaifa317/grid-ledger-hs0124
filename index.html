@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grid Ledger · Utility triage</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="engine.js"></script>
+<script defer src="scenarios.js"></script>
+<script defer src="evaluate.js"></script>
+<script defer src="app.js"></script>
+</head>
+<body>
+<header><strong>◈ &nbsp; Grid Ledger</strong><span>HS-0124 &nbsp; / &nbsp; SIMULATION</span></header>
+<main>
+<div class="intro"><p class="eyebrow">REGIONAL UTILITY / OPERATIONS</p>
+<h1>Feeder triage</h1><p>Reconcile observations before escalating a suspected outage or restoration.</p></div>
+<div class="layout">
+<aside class="panel">
+<h2>Observation queue</h2>
+<label for="language">Scenario language</label>
+<select id="language"><option value="en">English</option><option value="es">Español</option><option value="ur">اردو</option><option value="mixed">Mixed languages</option></select>
+<nav id="queue" aria-label="Feeder cases"></nav>
+<div class="import"><label for="file">Import observations (JSON)</label><input type="file" id="file" accept=".json,application/json"><p id="import-status" role="status"></p></div>
+</aside>
+<section class="panel workspace">
+<p class="eyebrow" id="clock"></p>
+<h2 id="case-title"></h2>
+<div id="decision" aria-live="polite"></div>
+<button id="verification" hidden>Add simulated crew verification</button>
+<h3>Observation evidence</h3>
+<div id="evidence"></div>
+<h3>Human review</h3>
+<p>Record a disposition and the verification reference. The evidence gate remains visible.</p>
+<form id="review">
+<label for="disposition">Disposition</label>
+<select id="disposition"><option>Request field verification</option><option>Escalate to supervisor</option><option>Verified by independent check</option></select>
+<label for="note">Reviewer and verification note</label>
+<textarea id="note" required maxlength="600" placeholder="Name, ticket or callback reference, and findings"></textarea>
+<button class="primary">Record review</button>
+</form>
+<p id="review-status" role="status"></p>
+<ol id="history"></ol>
+</section>
+</div>
+<section class="panel benchmark"><div class="bench-head"><div><p class="eyebrow">VALIDATION / 30 SYNTHETIC CASES</p><h2>Baseline comparison</h2></div><button id="evaluate">Run evaluation</button></div>
+<p>Both baselines read the newest report. The multilingual baseline uses the same phrase dictionary as the evidence gate, which also requires two distinct fresh sources to agree.</p>
+<div id="metrics" aria-live="polite"></div></section>
+</main>
+</body>
+</html>
